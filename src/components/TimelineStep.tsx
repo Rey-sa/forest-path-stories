@@ -15,7 +15,7 @@ interface TimelineStepProps {
 export const TimelineStep = ({ step, index }: TimelineStepProps) => {
   const isLeft = step.side === 'left';
   const animationClass = isLeft ? 'slide-in-left' : 'slide-in-right';
-  const delay = `${index * 0.3}s`;
+  const delay = `${index * 0.2}s`;
 
   return (
     <div 

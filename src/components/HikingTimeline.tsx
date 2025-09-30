@@ -44,8 +44,8 @@ export const HikingTimeline = () => {
 
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -56,16 +56,11 @@ export const HikingTimeline = () => {
       });
     }, observerOptions);
 
-    // Small delay to ensure DOM is ready
-    const timer = setTimeout(() => {
-      const steps = document.querySelectorAll('.timeline-step');
-      steps.forEach((step) => observer.observe(step));
-    }, 100);
+    // Observe all timeline steps
+    const steps = document.querySelectorAll('.timeline-step');
+    steps.forEach((step) => observer.observe(step));
 
-    return () => {
-      clearTimeout(timer);
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (

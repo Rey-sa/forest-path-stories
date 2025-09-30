@@ -18,11 +18,12 @@ export const TrailPath = () => {
       {/* Main Trail Path - Hidden on mobile, visible on desktop */}
       <path
         className="trail-path animate-draw-path hidden md:block"
-        d="M400 80 
-           C 200 200, 200 280, 400 400
-           C 600 520, 600 600, 400 720  
-           C 200 840, 200 920, 400 1040
-           C 600 1160, 600 1240, 400 1360"
+        d="M400 50 
+           C 250 200, 250 300, 400 450
+           C 550 600, 550 700, 400 850  
+           C 250 1000, 250 1100, 400 1250
+           C 550 1400, 550 1500, 400 1650
+           C 300 1750, 350 1850, 400 1950"
         filter="url(#pathGlow)"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -31,18 +32,20 @@ export const TrailPath = () => {
       {/* Mobile Trail - Straight line down the center */}
       <line
         className="trail-path animate-draw-path md:hidden"
-        x1="400" y1="80"
-        x2="400" y2="1360"
+        x1="400" y1="50"
+        x2="400" y2="1950"
         filter="url(#pathGlow)"
         strokeLinecap="round"
       />
       
-      {/* Trail Footsteps/Markers positioned at each step */}
+      {/* Trail Footsteps/Markers */}
       <g className="opacity-60">
-        <circle cx="400" cy="240" r="4" fill="hsl(var(--trail-brown))" className="animate-pulse" style={{animationDelay: '0.5s'}} />
-        <circle cx="400" cy="560" r="4" fill="hsl(var(--trail-brown))" className="animate-pulse" style={{animationDelay: '1s'}} />
-        <circle cx="400" cy="880" r="4" fill="hsl(var(--trail-brown))" className="animate-pulse" style={{animationDelay: '1.5s'}} />
-        <circle cx="400" cy="1200" r="4" fill="hsl(var(--trail-brown))" className="animate-pulse" style={{animationDelay: '2s'}} />
+        <circle cx="400" cy="200" r="4" fill="hsl(var(--trail-brown))" className="animate-pulse" style={{animationDelay: '0.5s'}} />
+        <circle cx="450" cy="450" r="4" fill="hsl(var(--trail-brown))" className="animate-pulse" style={{animationDelay: '1s'}} />
+        <circle cx="350" cy="700" r="4" fill="hsl(var(--trail-brown))" className="animate-pulse" style={{animationDelay: '1.5s'}} />
+        <circle cx="450" cy="950" r="4" fill="hsl(var(--trail-brown))" className="animate-pulse" style={{animationDelay: '2s'}} />
+        <circle cx="350" cy="1200" r="4" fill="hsl(var(--trail-brown))" className="animate-pulse" style={{animationDelay: '2.5s'}} />
+        <circle cx="400" cy="1450" r="4" fill="hsl(var(--trail-brown))" className="animate-pulse" style={{animationDelay: '3s'}} />
       </g>
     </svg>
   );
