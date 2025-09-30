@@ -11,12 +11,12 @@ export const ForestHero = () => {
       
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4">
-        <h1 className="title-forest text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in drop-shadow-2xl" 
-            style={{ textShadow: '4px 4px 8px rgba(0,0,0,0.8), 2px 2px 4px rgba(0,0,0,0.6)' }}>
+        <h1 className="title-forest text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in" 
+            style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
           Tinas Toller Tag
         </h1>
-        <p className="text-earth-cream text-lg md:text-xl max-w-2xl mx-auto leading-relaxed animate-fade-in font-medium drop-shadow-lg" 
-           style={{animationDelay: '0.5s', textShadow: '2px 2px 4px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.6)'}}>
+        <p className="text-white text-lg md:text-xl max-w-2xl mx-auto leading-relaxed animate-fade-in font-semibold" 
+           style={{animationDelay: '0.5s', textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>
           Folge mir auf einer wunderschönen Wanderung durch die Natur
         </p>
       </div>
