@@ -186,7 +186,7 @@
   .slide-in-left {
     opacity: 0;
     transform: translateX(-100px);
-    transition: var(--transition-nature);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   
   .slide-in-left.visible {
@@ -197,7 +197,7 @@
   .slide-in-right {
     opacity: 0;
     transform: translateX(100px);
-    transition: var(--transition-nature);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   
   .slide-in-right.visible {
@@ -216,12 +216,12 @@
   }
   
   @keyframes drawPath {
-    from { stroke-dashoffset: 1000; }
+    from { stroke-dashoffset: 2000; }
     to { stroke-dashoffset: 0; }
   }
   
   .animate-draw-path {
-    stroke-dasharray: 1000;
-    animation: drawPath 3s ease-in-out forwards;
+    stroke-dasharray: 2000;
+    animation: drawPath 4s ease-in-out forwards;
   }
 }
